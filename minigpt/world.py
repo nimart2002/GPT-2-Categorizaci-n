@@ -75,13 +75,15 @@ class World:
 
     def sample_encounter(self, obj: Object, action=None):
         """Un encuentro con obj. Si no se da la acción, se sortea."""
-        rng, cfg = self.rng, self.cfg
+        rng = self.rng if rng is None else rng
+        cfg = self.cfg
         a = rng.randint(0, 1) if action is None else action
         nu1 = bernoulli(cfg.epsilon[0], rng)
         nu2 = bernoulli(cfg.epsilon[1], rng)
         y1 = obj.u ^ obj.z ^ a ^ nu1
         y2 = obj.v ^ y1 ^ nu2
         return Encounter(obj.object_id, a, (y1, y2), (nu1, nu2))
+
 
 
 if __name__ == "__main__":
@@ -98,3 +100,5 @@ if __name__ == "__main__":
         print(f"  objeto {obj.object_id}: {obj.category}  {props}  "
               f"acción={enc.action}  Y1={enc.y[0]} Y2={enc.y[1]}   "
               f"[ocultas: u={obj.u} v={obj.v} z={obj.z} n={obj.n}]")
+
+    
