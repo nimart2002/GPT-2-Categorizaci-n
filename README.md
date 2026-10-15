@@ -4,8 +4,6 @@ Código del TFM *Generative Schemas in LLMs? A project on category induction, ep
 
 Un transformer de tipo GPT-2 (≈110.000 parámetros), entrenado **desde cero en CPU**, aprende un mundo sintético de categorías. Comparamos sus predicciones con las de un **observador bayesiano exacto** para saber qué partes de la estructura de las categorías ha aprendido realmente.
 
-> **Estado actual:** la fase 1 (adquisición del esquema) está implementada y evaluada. Las fases 2 (memoria episódica) y 3 (réplica y consolidación) están pendientes.
-
 ---
 
 ## Índice
