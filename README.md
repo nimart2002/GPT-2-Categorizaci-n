@@ -365,7 +365,7 @@ Valores **no especificados** en el documento del TFM (marcados como `SUPUESTO` e
 1. **ε = 0,1** para los despistes de Y1 e Y2.
 2. **p_hide_feature = 0,3** para las máscaras de observación.
 
-Decisiones pendientes de discutir con el tutor:
+Decisiones pendientes de discutir:
 
 3. **Etiquetas en el entrenamiento.** Ahora `p_hide_category = 0`: el modelo nunca ve `CAT ?` al entrenar, así que evaluar sin etiqueta sería fuera de distribución.
 4. **Un solo mundo.** Conviene repetir con varias asignaciones de nombres (`world_seed`).
